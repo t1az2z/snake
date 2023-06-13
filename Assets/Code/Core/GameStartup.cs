@@ -20,7 +20,7 @@ namespace Snake.Core
         private EcsSystems _fixedUpdateSystems;
         private EcsSystems _lateUpdateSystems;
 
-        private GameFsm _gameFsm;
+        private GameFSM.GameFSM _gameFsm;
         
         private void Awake()
         {
@@ -34,15 +34,10 @@ namespace Snake.Core
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create(_world);
 #endif
 
-            // _gameFsm = new GameFsm();
-            // _gameFsm.Init();
             
             _updateSystems.Init();
-            //_updateSystems.Inject(_gameFsm);
             _fixedUpdateSystems.Init();
-            //_fixedUpdateSystems.Inject(_gameFsm);
             _lateUpdateSystems.Init();
-            //_lateUpdateSystems.Inject(_gameFsm);
         }
         
         private EcsSystems CreateEcsSystems(string systemCollectionName, List<Object> systemProviders)

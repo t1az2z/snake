@@ -7,7 +7,7 @@ namespace Snake.Game.Systems
 {
     public class DebugKeysSystem : IEcsRunSystem
     {
-        private GameFsm _fsm;
+        private GameFSM _fsm;
 
         public async void Run()
         {
